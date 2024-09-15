@@ -1,0 +1,392 @@
+:root {
+    --back-color: #e7e0d8;
+    --dark-color: #25414f;
+    --main-color: #19c8fa;
+    --secondary-color: #fdfdfd;
+    --main-transition: 0.3s;
+}
+/* الوضع المظلم */
+body.dark-mode {
+    --back-color: #181818;
+    --dark-color: #ffffff;
+    --main-color: #19c8fa;
+    --secondary-color: #282828;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--back-color); /* لون الخلفية الداكن */
+    color: var(--dark-color); /* لون النص الفاتح */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+a {
+    text-decoration: none;
+    color: var(--main-color); /* الروابط بلون رئيسي */
+}
+abbr[title] {
+    text-decoration: none;
+}
+nav {
+    background-color: var(--secondary-color); /* لون خلفية الداكنة */
+}
+nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+nav h1 {
+    color: var(--dark-color); /* عنوان الفقرة باللون الفاتح */
+    margin: auto;
+    word-spacing: 10px;
+}
+nav .logo {
+    width: 80px;
+    height: 80px;
+}
+nav .logo img {
+    width: 100%;
+    border-radius: 50%;
+}
+nav .info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    margin-top: 5px;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+nav .info div span {
+    color: var(--main-color); /* لون النصوص الهامة */
+    margin-left: 5px;
+}
+/* start objective */
+.objective {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.objective .doctor {
+    align-items: center;
+    background-color: var(--secondary-color); /* خلفية ثانوية داكنة */
+    color: var(--dark-color); /* النص بلون فاتح */
+    width: 320px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+    border-radius: 10px;
+}
+.objective .doctor .photo {
+    width: 80px;
+    height: 80px;
+}
+.objective .doctor .photo img {
+    width: 100%;
+    border-radius: 50%;
+}
+.objective .doctor h2 {
+    text-transform: capitalize;
+    padding: 10px;
+    padding-right: 0;
+    color: var(--dark-color);
+}
+.objective .doctor p {
+    margin-top: 15px;
+    line-height: 1.8;
+    font-size: 18px;
+    color: var(--dark-color);
+}
+.objective .doctor .contact {
+    flex-basis: 25%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.objective .doctor .contact svg {
+    font-size: 19px;
+    color: var(--main-color); /* أيقونات التواصل الاجتماعي */
+}
+.objective .doctor .contact svg:hover {
+    color: var(--dark-color); /* تأثير عند التمرير */
+}
+/* start gallery */
+.galery {
+    background-color: var(--secondary-color); /* خلفية ثانوية داكنة */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.galery .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    margin: 15px;
+}
+.galery img {
+    width: 140px;
+    border: 2px solid var(--main-color); /* إطار حول الصور */
+}
+/* start gallery-work */
+.galery-work {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.card-body {
+    padding: 10px;
+    background-color: var(--secondary-color); /* لون خلفية البطاقة */
+    color: var(--dark-color);
+}
+.card-title {
+    font-weight: bold;
+    color: var(--main-color); /* لون عنوان البطاقة */
+}
+.card-text:last-child {
+    font-size: 11px;
+    font-weight: bold;
+    color: var(--dark-color);
+}
+/* start footer */
+footer {
+    background-color: var(--secondary-color); /* لون الفوتر الداكن */
+}
+footer .container {
+    color: var(--dark-color);
+    text-align: center;
+}
+footer .container img {
+    padding: 30px;
+    width: 120px;
+}
+footer .container h4 {
+    font-weight: normal;
+    font-size: 18px;
+    word-spacing: 5px;
+    padding-bottom: 30px;
+    margin-bottom: 15px;
+    position: relative;
+    color: var(--dark-color);
+}
+footer .container h4::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 1px;
+    background-color: var(--dark-color);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+footer .container svg {
+    padding: 0 10px 40px;
+    color: var(--main-color); /* لون أيقونات التواصل الاجتماعي */
+}
+footer .container svg:hover {
+    color: var(--dark-color); /* تأثير عند التمرير */
+}
+footer .container p {
+    padding: 30px;
+    text-transform: capitalize;
+}
+footer .container p span {
+    color: var(--main-color); /* تمييز النص في الفوتر */
+}
+/* end footer */
+/* adds */
+/* ********************************************************* */
+.whats {
+    color: #128c7e; /* لون واتساب */
+}
+.toggle-checkbox{
+    -webkit-appearance: none;
+    appearance: none;
+    display: none;
+}
+.toggle-switch {
+    background-color: var(--dark-color);
+    width: 78px;
+    height: 32px;
+    border-radius: 16px;
+    position: relative;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.toggle-switch::before {
+    font-family: var(--fa-style-family-classic);
+    content: "\f185";
+    font-weight: 900;
+    background-color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fdb913;
+    transition: 0.3s;
+}
+.toggle-checkbox:checked + .toggle-switch {
+    background-color: black;
+    
+}
+.toggle-checkbox:checked + .toggle-switch::before {
+    left: 50px;
+    color: black;
+    content: "\f186";
+}
+.settings-page :disabled{
+    cursor: no-drop;
+    background-color: #f0f4f8;
+    color: #bbb;
+}
+/* ******************************************************** */
+/* إعداد الحركات للعناصر */
+@keyframes slideFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+/* تطبيق الحركات عند تحميل الصفحة */
+.doctor {
+    opacity: 0; /* يبدأ بالاختفاء */
+    transition: opacity 0.5s ease-in-out;
+}
+.doctor.left {
+    animation: slideFromLeft 1s ease-out forwards;
+}
+.doctor.right {
+    animation: slideFromRight 1s ease-out forwards;
+}
+.doctor.middle {
+    animation: fadeIn 1s ease-out forwards;
+}
+/* ****************** */
+.galery img{
+    opacity: 0; /* يبدأ بالاختفاء */
+    transition: opacity 0.5s ease-in-out;
+}
+.galery img.left {
+    animation: slideFromLeft 1s ease-out forwards;
+}
+.galery img.right {
+    animation: slideFromRight 1s ease-out forwards;
+}
+.galery img.middle {
+    animation: fadeIn 1s ease-out forwards;
+}
+/* ************************************* */
+.card{
+    opacity: 0; /* يبدأ بالاختفاء */
+    transition: opacity 0.5s ease-in-out;
+}
+.galery-work .card.left {
+    animation: slideFromLeft 1s ease-out forwards;
+}
+.galery-work .card.right {
+    animation: slideFromRight 1s ease-out forwards;
+}
+.galery-work .card.middle {
+    animation: fadeIn 1s ease-out forwards;
+}
+/* *********************************** */
+.events{
+    background-color: var(--secondary-color);
+    border-top: 1px solid var(--dark-color);
+    border-bottom: 1px solid var(--dark-color);
+}
+.events .container{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.events .container h3{
+    text-transform: capitalize;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.events .container p{
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+.events .container .time{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px auto;
+}
+.events .container .time .unit{
+    border: 1px solid #d4d4d4;
+    border-radius: 6px;
+    width: 75px;
+    text-align: center;
+    transition: var(--main-transition);
+}
+.events .container .time .unit:hover,
+.events .container .time .unit:hover span:last-child{
+
+    border-color: var(--main-color);
+}
+.events .container .time .unit span{
+    display: block;
+    transition: var(--main-transition);
+}
+.events .container .time .unit span:first-of-type{
+    font-size: 35px;
+    padding: 15px;
+    color: var(--main-color);
+    font-weight: bold;
+}
+.events .container .time .unit span:last-of-type{
+    padding: 8px 10px;
+    font-size: 13px;
+    border: 1px solid #d4d4d4;
+}

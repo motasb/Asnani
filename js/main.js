@@ -106,4 +106,7 @@ let counter = setInterval(() => {
     if (dateDiff <  0) {
         clearInterval(counter);
     }
-},1000)
+}, 1000)
+
+// تم حذف قسم الاحداث
+document.querySelector(".events").remove();
